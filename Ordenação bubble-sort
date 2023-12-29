@@ -1,0 +1,41 @@
+#include<iostream.h>
+#include <conio.h>
+
+// Jailson crepaldi inacio info 1
+
+void main(){
+    int temp;  // variável para armazenar temporariamente o valor maior
+    int i, a, t;  // contadores
+    int n = 5;   // número máximo de números para ordenar
+    int num[1000];  // o máximo de posições para num é igual a 1000
+
+    clrscr();
+
+    // Solicita ao usuário que digite cinco números
+    for(i = 0; i <= (n - 1); i++){
+        cprintf("\nDigite um numero para a posicao %d", i);
+        cin >> num[i];
+    }
+
+    // Verifica quem é o maior, utilizando o algoritmo Bubble Sort
+    do {
+        t = 0;
+        for(a = 0; a <= n - 2; a++) {
+            if(num[a] > num[a + 1]) {
+                // Troca os elementos se estiverem fora de ordem
+                temp = num[a];
+                num[a] = num[a + 1];
+                num[a + 1] = temp;
+                t++;
+            }
+        }
+    } while(t > 0);
+
+    // Lista os valores ordenados
+    cprintf("\nValores ordenados: ");
+    for(i = 0; i <= (n - 1); i++) {
+        cprintf("%d  ", num[i]);
+    }
+
+    getche();
+}
