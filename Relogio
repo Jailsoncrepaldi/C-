@@ -1,0 +1,46 @@
+#include <graphics.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <conio.h>
+#include <dos.h>
+
+int main(void)
+{
+   /* request auto detection */
+   int gdriver = DETECT, gmode, errorcode;
+
+   /* initialize graphics mode */
+   initgraph(&gdriver, &gmode, "c:\\borlandc\\bgi");
+
+   /* read result of initialization */
+   errorcode = graphresult();
+
+   if (errorcode != grOk)  /* an error occurred */
+   {
+      printf("Graphics error: %s\n", grapherrormsg(errorcode));
+      printf("Press any key to halt:");
+      getch();
+      exit(1);             /* return with error code */
+   }
+   struct time t;
+
+   setbkcolor(BLUE);
+   setcolor(WHITE);
+   settextstyle(TRIPLEX_FONT,HORIZ_DIR,4);
+   char horario[9];
+   int contador=0;
+   do {
+       gettime(&t);
+       sprintf(horario,"%02d:%02d:%02d",t.ti_hour,t.ti_min,t.ti_sec);
+       outtextxy(60,30,horario);
+       delay(700);
+       setcolor(getbkcolor());
+       outtextxy(60,30,horario);
+       setcolor(WHITE);
+       contador++;
+   } while (! kbhit());
+
+   /* clean up */
+   closegraph();
+   return 0;
+}
