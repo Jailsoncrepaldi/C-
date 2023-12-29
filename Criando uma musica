@@ -1,0 +1,147 @@
+#include <dos.h>
+#include <conio.h>
+#include <stdio.h>
+#include<iostream.h>
+#define T 250
+void main(){
+		window(1,1,80,50);
+	textbackground(1);
+	textcolor(WHITE);
+	clrscr();
+	gotoxy(1,1);
+	cout<<"TECLADO BY JAILSON CREPALDI PRESSIONE ESC PRA SAIR";
+	window(2,2,77,49);
+	textbackground(0);
+	textcolor(6);
+	clrscr();
+
+	char op;
+	do
+	{
+	if(op=='h')
+	{
+
+		sound(450);delay(250);
+		printf(" A ");
+	}
+	if(op=='a')
+	{
+
+		sound(260);delay(250);
+		printf(" C ");
+	}
+	if(op=='w')
+	{
+
+		sound(280);delay(250);
+		printf(" C# ");
+	}
+	if(op=='s')
+	{
+
+		sound(295);delay(250);
+		printf(" D ");
+	}
+	if(op=='e')
+	{
+
+		sound(310);delay(250);
+		printf(" C ");
+	}
+	if(op=='d')
+	{
+
+		sound(330);delay(250);
+		printf(" E ");
+	}
+	if(op=='f')
+	{
+
+		sound(350);delay(250);
+		printf(" F ");
+	}
+	if(op=='t')
+	{
+
+		sound(380);delay(250);
+		printf(" F# ");
+	}
+	if(op=='g')
+	{
+
+		sound(397);delay(250);
+		printf(" G ");
+	}
+	if(op=='j')
+	{
+
+		sound(500);delay(250);
+		printf(" B ");
+	}
+	if(op=='k')
+	{
+
+		sound(520);delay(250);
+		printf(" D ");
+	}
+	if(op=='l')
+	{
+
+		sound(540);delay(250);
+		printf(" E ");
+	}
+	if(op=='A')
+	{
+
+		sound(1050);delay(250);
+		printf(" C ");
+	}
+	if(op=='S')
+	{
+
+		sound(1160);delay(250);
+		printf(" D ");
+	}
+	if(op=='D')
+	{
+
+		sound(1300);delay(250);
+		printf(" E ");
+
+	}
+	if(op=='F')
+	{
+
+		sound(1400);delay(250);
+		printf(" F ");
+	}
+	if(op=='G')
+	{
+
+		sound(1600);delay(250);
+		printf(" G ");
+	}
+	if(op=='H')
+	{
+
+		sound(1800);delay(250);
+		printf(" A ");
+	}
+	if(op=='J')
+	{
+
+		sound(2000);delay(250);
+		printf(" B ");
+	}
+	if(op=='K')
+	{
+
+		sound(2100);delay(250);
+		printf(" C ");
+	}
+	nosound();
+	op=getche();
+	}while(op!=27);
+
+
+}
