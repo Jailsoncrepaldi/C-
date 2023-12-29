@@ -1,0 +1,30 @@
+#include<iostream.h>
+#include<conio.h>
+#include<stdlib.h>
+#include<stdio.h>
+#include<string.h>
+void main(void)
+{
+	clrscr();
+	int cod;
+	char nome[100];
+	float x;
+	cprintf("\n Seu c¢digo ");
+	cin>>cod;
+	cout<<"\n Seu nome ";
+	gets(nome);
+	cprintf("\n Especifico X ");
+	cin>>x;
+	clrscr();
+	cprintf(" Respostas ");
+	gotoxy(1,2);
+	cprintf("\n Seu c¢digo ‚ : %d",cod);
+	gotoxy(1,4);
+	cprintf("\n Seu nome ‚ : %s",nome);
+	gotoxy(1,6);
+	textcolor(2+BLINK);
+	cprintf("\n Seu fator X %0.1f",x);
+	getche();
+	textcolor(15);
+	clrscr();
+}
