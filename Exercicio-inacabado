@@ -1,0 +1,108 @@
+#include<iostream.h>
+#include <conio.h>
+#include<stdio.h>
+#include<string.h>
+
+//~
+// exercicio :
+// Fazer um programa q cadastre um numero indefinido de empresas
+// este programa deve listar todas as empresas q tem cidade como criciuma
+// e lista-los em ordem decrescente(de z para a)
+void main()
+{
+	clrscr();
+	char nome[100][30];
+	char cod[100][30];
+	char tel[100][30];
+	char fax[100][30];
+	char email[100][30];
+	char cidade[100][30];
+	char estado[100][30];
+	char pais[100][30];
+	char bairro[100][30];
+	char rua[100][30];
+	char web[100][30];
+	char temp[100][30];
+	char cnpj[100][30];
+	char op;
+	int tam=0;
+	int i=0,q=0;
+	int pc;//posicao do cadastro
+	clrscr();
+	do // cadastro
+	{
+		clrscr();
+		pc++;
+		gotoxy(1,1);
+		cprintf("\n C¢digo ");
+		gotoxy(1,2);
+		cprintf("\n Nome ");
+		gotoxy(1,3);
+		cprintf("\n Telefone ");
+		gotoxy(1,4);
+		cprintf("\n Fax ");
+		gotoxy(1,5);
+		cprintf("\n Email ");
+		gotoxy(1,6);
+		cprintf("\n Rua ");
+		gotoxy(1,7);
+		cprintf("\n Bairro ");
+		gotoxy(1,8);
+		cprintf("\n Cidade ");
+		gotoxy(1,9);
+		cprintf("\n Estado ");
+		gotoxy(1,10);
+		cprintf("\n Pais ");
+		gotoxy(1,11);
+		cprintf("\n Website ");
+		gotoxy(1,12);
+		cprintf("\n Cnpj ");
+		gotoxy(1,14);
+		cprintf("\n Deseja cadastrar outra(s/n)");
+		gotoxy(9,2);
+		gets(cod[pc]);
+		gotoxy(9,3);
+		gets(nome[pc]);
+		gotoxy(11,4);
+		gets(tel[pc]);
+		gotoxy(9,5);
+		gets(fax[pc]);
+		gotoxy(9,6);
+		gets(email[pc]);
+		gotoxy(9,7);
+		gets(rua[pc]);
+		gotoxy(9,8);
+		gets(bairro[pc]);
+		gotoxy(9,9);
+		gets(cidade[pc]);
+		gotoxy(9,10);
+		gets(estado[pc]);
+		gotoxy(9,11);
+		gets(pais[pc]);
+		gotoxy(10,12);
+		gets(web[pc]);
+		gotoxy(9,13);
+		gets(cnpj[pc]);
+		gotoxy(30,15);
+		op=getche();
+
+	}while((pc<=29)||(op!='n'));
+	// lista
+
+		clrscr();
+	for(i=0; i<=(pc-1); i++)
+	{
+			if(strcmp(cidade[i],"cric")==0)
+		{
+	      //	   tam=strlen(nome[i]);
+	      //	   for(int as=0; as<=tam-1; as++)
+	      //	   {
+		      // veriificar se eh letra proima de z
+	      //	   }
+// por algum motivo q nao conheco o 'for' esta mostrando apenas um resultado
+		   cprintf("%s",nome[i]);
+		}
+	}
+
+		getche();
+}
