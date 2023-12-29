@@ -1,0 +1,85 @@
+ #include<string.h>
+ #include<conio.h>
+ #include<iostream.h>
+ #include<stdio.h>
+ void main(void)
+ {
+ int tam,i,nv,a,e,b,o,u,d,nl,tcon=0;
+ float pa=0,pe=0,pi=0,po=0,pu=0,pesp=0;
+	char nome[40]="";
+       a=0; e=0; b=0; o=0; u=0; d=0;
+
+	textbackground(0);
+	textcolor(WHITE);
+	clrscr();
+	cout<<"Digite Um Nome:";
+	gets(nome);
+		clrscr();
+		tam=strlen(nome);
+		cout<<"Quantidade de Caracteres: "<<tam<<endl;
+		cout<<"Primeira Letra..........: ";
+		cout.put(nome[0])<<endl;
+		cout<<"Ultima Letra............: ";
+		cout.put(nome[tam-1])<<endl;
+			for (i=0;i<=tam;i=i+1)
+			{
+				if (nome[i]=='a')
+				a=a+1;
+				if (nome[i]==' ')
+				d=d+1;
+				if (nome[i]=='e')
+				e=e+1;
+				if (nome[i]=='i')
+				b=b+1;
+				if (nome[i]=='o')
+				o=o+1;
+				if (nome[i]=='u')
+				u=u+1;
+			}
+		nv=a+e+b+o+u;
+		nl=tam-d;
+		pa=((a*100)/tam);
+		pe=((e*100)/tam);
+		pi=((i*100)/tam);
+		po=((o*100)/tam);
+		pu=((u*100)/tam);
+		pesp=((d*100)/tam);
+		tcon=(nl-nv);
+		cout<<"Quantidade de Vogais....: "<<nv<<endl;
+		cout<<"Quantidade de a.........: "<<a<<endl;
+		cout<<"Quantidade de e.........: "<<e<<endl;
+		cout<<"Quantidade de i.........: "<<b<<endl;
+		cout<<"Quantidade de o.........: "<<o<<endl;
+		cout<<"Quantidade de u.........: "<<u<<endl;
+		cout<<"xnN£mero de Letras........: "<<nl;
+		cout<<"\nN£mero de palavras........: "<<d+1;
+		cout<<"\nN£mero de letras sem os espa‡os........: "<<nl-d;
+		cout<<"\nPercentual de vogais letra A........: "<<pa;
+		cout<<"\nPercentual de vogais letra E........: "<<pe;
+		cout<<"\nPercentual de vogais letra I........: "<<pi;
+		cout<<"\nPercentual de vogais letra O........: "<<po;
+		cout<<"\nPercentual de vogais letra U........: "<<pu;
+		cout<<"\nPercentual de espa‡os ........: "<<pesp;
+		cout<<"\nTotal de consoantes........: "<<tcon;
+		for (i=0;i<=tam;i=i+1)
+		{
+			cout<<"\n\t\t\t\t\t"<<nome[i];
+		}
+		char nova[40]="";
+		int ini,fim=0;
+		tam=strlen(nome);
+		for(ini=0,fim=tam-1;ini<=tam-1;ini++,fim--)
+		{
+			nova[ini]=nome[fim];
+		}
+		if (strcmp(nome,nova)==0)
+		{
+			cout<<endl<<"A Palavra ‚ Palindrome!";
+		}
+			else
+		{
+			cout<<endl<<"A Palavra ¤ ‚ Palindrome!";
+		}
+		getche();
+
+ }
